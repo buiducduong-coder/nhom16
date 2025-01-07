@@ -1,0 +1,75 @@
+/* Căn giữa toàn bộ dropdown */
+body {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    min-height: 100vh; /* Đảm bảo chiều cao trang bằng 100% viewport */
+    margin: 0;
+    background-color: #f9f9f9; /* Màu nền */
+    font-family: Arial, sans-serif;
+}
+
+/* Phong cách cho dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Phong cách cho nút dropdown */
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Phong cách cho menu thả xuống */
+.dropdown-menu {
+    display: none; /* Ẩn menu mặc định */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    width: 250px;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 14px;
+    color: #270505;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #753636;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+

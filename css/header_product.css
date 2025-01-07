@@ -1,0 +1,166 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Đảm bảo chiều cao của cả html và body */
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome, Safari và Edge */
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    position: sticky; /* Giữ cố định thanh menu khi cuộn */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Phần menu trái */
+header nav .left-nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav .left-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav .left-nav a:hover {
+    color: #ff9900;
+}
+
+/* Thanh tìm kiếm ở giữa */
+header nav .search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header nav .search-bar input[type="text"] {
+    padding: 8px 15px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+input[type="text"]{
+    margin: 0px -10px;
+}
+header nav .search-bar button {
+    padding: 10px 16px;
+    border: none;
+    background: #ff9900;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+    
+header nav .search-bar button:hover {
+    background: #e67e00;
+}
+
+/* Phần menu phải */
+header nav .right-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+header nav .right-nav span {
+    color: white;
+    font-size: 16px;
+}
+
+header nav .right-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header nav .right-nav a:hover {
+    color: #ff9900;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer .footer-links ul li a:hover {
+    color: #ff9900;
+}
+
+footer .footer-contact p {
+    margin: 0;
+    font-size: 14px;
+}
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* Cắt ảnh theo khung tròn */
+    margin-right: 10px;
+    vertical-align: middle;
+}

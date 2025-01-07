@@ -1,0 +1,270 @@
+/* Reset cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Đảm bảo chiều cao của cả html và body */
+    overflow: hidden; /* Ẩn toàn bộ thanh cuộn */
+    overflow-y: scroll; /* Đảm bảo cuộn dọc vẫn hoạt động */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.order-table,
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.order-table th,
+.details-table th {
+    background: #34495e;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.order-table td,
+.details-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.details-table img {
+    width: 50px;
+    height: auto;
+}
+
+.status-pending {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+.status-completed {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.status-cancelled {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.details-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.details-link:hover {
+    color: #2980b9;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+header nav .left-nav,
+header nav .right-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff9900;
+}
+
+/* Thanh tìm kiếm */
+header nav .search-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header nav .search-bar input[type="text"] {
+    padding: 8px 15px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+header nav .search-bar button {
+    padding: 8px 15px;
+    border: none;
+    background: #ff9900;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+header nav .search-bar button:hover {
+    background: #e67e00;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 387px;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-links ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer .footer-links ul li a:hover {
+    color: #ff9900;
+}
+.logo {
+    width: 50px;
+    height: 100%;
+    border-radius: 100%;
+}
+footer .logo{
+    width: 80px;
+    border-radius: 100%;
+}
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* Cắt ảnh theo khung tròn */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Định dạng dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 500;
+    color:white;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: auto;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 10;
+    width: 170px;
+    text-align: center;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px;
+    text-align: center;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hiển thị menu */
+.dropdown.active .dropdown-menu {
+    display: block;
+    align-items: center;
+}
+
+.right-nav{
+    margin: 0px -20px 0px 20px;
+}
+tr{
+    text-align: center;
+}

@@ -1,0 +1,103 @@
+/* Toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Thanh điều hướng chính */
+.container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Các trường nhập liệu */
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],
+textarea,
+input[type="number"],
+input[type="file"],
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #005bb5;
+}
+
+/* Nút Quay lại */
+.back-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #c0392b;
+}
+
+/* Cảnh báo lỗi hoặc thành công */
+.error, .success {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}

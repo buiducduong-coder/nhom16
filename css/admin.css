@@ -1,0 +1,300 @@
+
+html, body {
+    height: 100%; /* Đảm bảo chiều cao của cả html và body */
+    overflow: hidden; /* Ẩn toàn bộ thanh cuộn */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll; /* Đảm bảo cuộn dọc vẫn hoạt động */
+    -ms-overflow-style: none; /* Ẩn thanh cuộn trên IE và Edge */
+    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn trên Chrome, Safari và Edge */
+}
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 10px 0;
+}
+
+.sidebar-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #34495e;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ecf0f1;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.topbar .home-icon {
+    text-decoration: none;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.topbar .notification-icon {
+    margin-right: 10px;
+}
+
+.topbar .admin-name {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.logout-button {
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Thêm thanh cuộn ngang nếu cần */
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    table-layout: fixed; /* Hạn chế độ rộng các cột */
+}
+
+table thead th {
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Giữ nội dung không bị xuống dòng */
+}
+
+table tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Cắt nội dung nếu quá dài */
+}
+
+/* Inputs and selects in table */
+table tbody input,
+table tbody textarea,
+table tbody select {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Bố cục hàng ngang cho nút chọn tệp và upload */
+.file-upload-row {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa nút "Chọn tệp" và "Upload" */
+}
+
+.file-label {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+/* Hiệu ứng hover cho nút chọn tệp */
+.file-label:hover {
+    background-color: #2980b9;
+}
+
+/* Ẩn input file mặc định */
+.image-upload {
+    display: none; /* Ẩn input file mặc định */
+}
+
+.upload-image-button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Hiệu ứng hover cho nút upload */
+.upload-image-button:hover {
+    background-color: #27ae60;
+}
+
+/* Định dạng ảnh và căn chỉnh */
+.product-img {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Thu nhỏ cột số lượng */
+table tbody input.quantity {
+    max-width: 60px;
+    text-align: center;
+}
+/* Định dạng cột số lượng */
+table tbody td.quantity {
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+    max-width: 0px; /* Giới hạn độ rộng tối đa của cột */
+    padding: 5px; /* Giảm khoảng cách nội dung trong ô */
+}
+
+
+/* Định dạng bảng và form */
+.container {
+    overflow-x: auto;
+}
+
+/* Các liên kết khác trong nội dung chính */
+a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td{
+    text-align: center;
+}
+
+.admin-name{
+    gap: 40px;
+}
+.logout-button{
+    margin-left:30px ;
+}
+.add-catalog-form{
+    margin: 10px 0px;
+}
+.col-transaction-id {
+    width: 5%; /* 10% của tổng chiều rộng bảng */
+}
+
+.col-name {
+    width: 15%; /* 15% của tổng chiều rộng bảng */
+}
+
+.col-phone {
+    width: 8%;
+}
+
+.col-address {
+    width: 20%;
+}
+
+.col-username {
+    width: 10%;
+}
+
+.col-status {
+    width: 8%;
+}
+
+.col-approve,
+.col-details,
+.col-delete {
+    width: 5%;
+    text-align: center; /* Căn giữa các nút trong các cột nhỏ */
+}
+
+.col-date {
+    width: 15%;
+}
+
+.add-product-button {
+    display: inline-block;
+    background-color: #e74c3c; /* Màu xanh lá */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-button:hover {
+    color: white;
+    background-color:#ae3021; /* Đổi màu khi hover */
+    transform: translateY(-2px); /* Hiệu ứng di chuyển lên khi hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+
